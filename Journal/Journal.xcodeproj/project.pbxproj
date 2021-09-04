@@ -12,6 +12,9 @@
 		7EDA1216259D233600BBD350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDA1214259D233600BBD350 /* Main.storyboard */; };
 		7EDA1218259D233700BBD350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDA1217259D233700BBD350 /* Assets.xcassets */; };
 		7EDA121B259D233700BBD350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDA1219259D233700BBD350 /* LaunchScreen.storyboard */; };
+		EC1CEC8D26E3BCA900A1FD25 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC8C26E3BCA900A1FD25 /* Entry.swift */; };
+		EC1CEC9026E3BCC400A1FD25 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC8F26E3BCC400A1FD25 /* Journal.swift */; };
+		EC1CEC9726E3BE2A00A1FD25 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC9626E3BE2A00A1FD25 /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		7EDA1217259D233700BBD350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EDA121A259D233700BBD350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EDA121C259D233700BBD350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1CEC8C26E3BCA900A1FD25 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = ../../../../../../../../../../Documents/Entry.swift; sourceTree = "<group>"; };
+		EC1CEC8F26E3BCC400A1FD25 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		EC1CEC9626E3BE2A00A1FD25 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		7EDA120D259D233600BBD350 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				EC1CEC9126E3BDE100A1FD25 /* Controllers */,
+				EC1CEC8B26E3BC9F00A1FD25 /* Model */,
 				7EDA1223259D234200BBD350 /* Resources */,
 				7EDA1227259D237600BBD350 /* Storyboards */,
 			);
@@ -78,6 +86,31 @@
 				7EDA1219259D233700BBD350 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EC1CEC8B26E3BC9F00A1FD25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC1CEC8C26E3BCA900A1FD25 /* Entry.swift */,
+				EC1CEC8F26E3BCC400A1FD25 /* Journal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC1CEC9126E3BDE100A1FD25 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC1CEC9226E3BDE900A1FD25 /* Model Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC1CEC9226E3BDE900A1FD25 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC1CEC9626E3BE2A00A1FD25 /* EntryController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1CEC8D26E3BCA900A1FD25 /* Entry.swift in Sources */,
 				7EDA120F259D233600BBD350 /* AppDelegate.swift in Sources */,
+				EC1CEC9726E3BE2A00A1FD25 /* EntryController.swift in Sources */,
 				7EDA1211259D233600BBD350 /* SceneDelegate.swift in Sources */,
+				EC1CEC9026E3BCC400A1FD25 /* Journal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

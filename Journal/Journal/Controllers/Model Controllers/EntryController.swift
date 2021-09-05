@@ -10,7 +10,7 @@ import Foundation
 class EntryController {
     
     // MARK: - Shared Instance
-    let shared = EntryController()
+    static let shared = EntryController()
     
     // MARK: - SOT
     var entries: [Entry] = []

@@ -13,6 +13,10 @@ class EntryListTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Journalv2"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 

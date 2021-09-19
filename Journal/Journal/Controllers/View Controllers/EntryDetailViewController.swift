@@ -18,7 +18,7 @@ class EntryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateViews()
     }
     
     // MARK: - IBAction
@@ -43,6 +43,8 @@ class EntryDetailViewController: UIViewController {
     // MARK: - Functions
     
     func updateViews() {
-        
+        guard let entry = entry else { return }
+        titleTextField.text = entry.title
+        bodyTextView.text = entry.body
     }
 }

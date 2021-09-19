@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,6 +33,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="KpP-Wz-ZJQ" kind="show" identifier="toDetailVC" id="Zpm-SZ-9uv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -40,7 +44,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="EUR-Kp-heK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FZM-0s-BBU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FZM-0s-BBU">
+                            <connections>
+                                <segue destination="KpP-Wz-ZJQ" kind="show" id="XOn-nX-u0j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myI-Fe-lZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -63,8 +71,76 @@
             </objects>
             <point key="canvasLocation" x="-586" y="97"/>
         </scene>
+        <!--Entry Detail View Controller-->
+        <scene sceneID="q36-0g-PD5">
+            <objects>
+                <viewController id="KpP-Wz-ZJQ" customClass="EntryDetailViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4g4-TX-aTA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hIp-AM-nWe">
+                                <rect key="frame" x="8" y="267" width="398" height="264"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title here.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZk-Da-dyN">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write entry here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D0c-TO-gFr">
+                                        <rect key="frame" x="0.0" y="44" width="398" height="220"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3v-Qc-H4m">
+                                <rect key="frame" x="161" y="641" width="92" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Clear Text"/>
+                                <connections>
+                                    <action selector="clearTextButtonTapped:" destination="KpP-Wz-ZJQ" eventType="touchUpInside" id="qiv-C9-aiA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YvJ-15-fzO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YvJ-15-fzO" firstAttribute="bottom" secondItem="o3v-Qc-H4m" secondAttribute="bottom" constant="221" id="7Xz-td-sJE"/>
+                            <constraint firstItem="hIp-AM-nWe" firstAttribute="top" secondItem="YvJ-15-fzO" secondAttribute="top" constant="179" id="8UU-lt-ixc"/>
+                            <constraint firstItem="YvJ-15-fzO" firstAttribute="trailing" secondItem="o3v-Qc-H4m" secondAttribute="trailing" constant="161" id="H7O-YR-XyC"/>
+                            <constraint firstItem="YvJ-15-fzO" firstAttribute="trailing" secondItem="hIp-AM-nWe" secondAttribute="trailing" constant="8" id="PSV-Xp-XOs"/>
+                            <constraint firstItem="o3v-Qc-H4m" firstAttribute="top" secondItem="hIp-AM-nWe" secondAttribute="bottom" constant="110" id="gpt-sX-P4t"/>
+                            <constraint firstItem="o3v-Qc-H4m" firstAttribute="leading" secondItem="YvJ-15-fzO" secondAttribute="leading" constant="161" id="imD-dP-sAM"/>
+                            <constraint firstItem="hIp-AM-nWe" firstAttribute="leading" secondItem="YvJ-15-fzO" secondAttribute="leading" constant="8" id="pNX-zZ-pQi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QnP-gi-76q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HNp-0C-e7J">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="KpP-Wz-ZJQ" id="QWi-OU-Ym1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="D0c-TO-gFr" id="Ah3-Do-XF1"/>
+                        <outlet property="titleTextField" destination="mZk-Da-dyN" id="lWM-Zg-MhC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKV-Rm-2Gq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176.8115942028987" y="95.758928571428569"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zpm-SZ-9uv"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

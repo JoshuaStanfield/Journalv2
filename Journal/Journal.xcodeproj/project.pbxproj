@@ -16,6 +16,7 @@
 		EC1CEC9026E3BCC400A1FD25 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC8F26E3BCC400A1FD25 /* Journal.swift */; };
 		EC1CEC9726E3BE2A00A1FD25 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC9626E3BE2A00A1FD25 /* EntryController.swift */; };
 		EC1CEC9926E51BF500A1FD25 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC9826E51BF500A1FD25 /* EntryListTableViewController.swift */; };
+		EC1CEC9C26E8478900A1FD25 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC9B26E8478900A1FD25 /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EC1CEC8F26E3BCC400A1FD25 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		EC1CEC9626E3BE2A00A1FD25 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		EC1CEC9826E51BF500A1FD25 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		EC1CEC9B26E8478900A1FD25 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EC1CEC9826E51BF500A1FD25 /* EntryListTableViewController.swift */,
+				EC1CEC9B26E8478900A1FD25 /* EntryDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				EC1CEC9926E51BF500A1FD25 /* EntryListTableViewController.swift in Sources */,
 				EC1CEC9726E3BE2A00A1FD25 /* EntryController.swift in Sources */,
 				7EDA1211259D233600BBD350 /* SceneDelegate.swift in Sources */,
+				EC1CEC9C26E8478900A1FD25 /* EntryDetailViewController.swift in Sources */,
 				EC1CEC9026E3BCC400A1FD25 /* Journal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

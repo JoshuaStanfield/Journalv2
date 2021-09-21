@@ -8,6 +8,9 @@
 import UIKit
 
 class EntryListTableViewController: UITableViewController {
+    
+    // MARK: - Properties
+    var journal: Journal?
 
     override func viewDidLoad() {
         super.viewDidLoad()

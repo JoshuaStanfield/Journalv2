@@ -18,6 +18,7 @@
 		EC1CEC9C26E8478900A1FD25 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC9B26E8478900A1FD25 /* EntryDetailViewController.swift */; };
 		EC1CEC9E26F705EF00A1FD25 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC9D26F705EF00A1FD25 /* Journal.swift */; };
 		EC1CECA026F70A4900A1FD25 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CEC9F26F70A4900A1FD25 /* JournalController.swift */; };
+		EC1CECA226F9800E00A1FD25 /* JournalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1CECA126F9800E00A1FD25 /* JournalListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EC1CEC9B26E8478900A1FD25 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		EC1CEC9D26F705EF00A1FD25 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Journal.swift; path = "../Controllers/Model Controllers/Journal.swift"; sourceTree = "<group>"; };
 		EC1CEC9F26F70A4900A1FD25 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
+		EC1CECA126F9800E00A1FD25 /* JournalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				EC1CEC9826E51BF500A1FD25 /* EntryListTableViewController.swift */,
 				EC1CEC9B26E8478900A1FD25 /* EntryDetailViewController.swift */,
+				EC1CECA126F9800E00A1FD25 /* JournalListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1CECA226F9800E00A1FD25 /* JournalListViewController.swift in Sources */,
 				EC1CEC8D26E3BCA900A1FD25 /* Entry.swift in Sources */,
 				EC1CECA026F70A4900A1FD25 /* JournalController.swift in Sources */,
 				7EDA120F259D233600BBD350 /* AppDelegate.swift in Sources */,

@@ -9,23 +9,16 @@ import Foundation
 
 class EntryController {
     
-    // MARK: - Shared Instance
-    static let shared = EntryController()
-    
-    // MARK: - SOT
-    var entries: [Entry] = []
-    
     // MARK: - CRUD Functions
     ///Create an entry and add it to the entries array.
-    func createEntryWith(title: String, body: String) {
+    static func createEntryWith(title: String, body: String, journal: Journal) {
         let entry = Entry(title: title, body: body)
-        entries.append(entry)
+        JournalController.shared.addEntryTo(journal: journal, entry: entry)
     }
     
     ///Find the index of the entry and remove it at that index.
-    func delete(entry: Entry) {
-        guard let index = entries.firstIndex(of: entry) else {return}
-        entries.remove(at: index)
+    static func delete(entry: Entry, journal: Journal) {
+        JournalController.shared.removeEntryFrom(journal: journal, entry: entry)
     }
     
     // MARK: - Persistence

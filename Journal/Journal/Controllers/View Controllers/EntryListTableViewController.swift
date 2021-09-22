@@ -30,11 +30,9 @@ class EntryListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entryCell", for: indexPath)
 
-        guard let journal = journal?.entries[indexPath.row] else { return UITableViewCell() }
+        guard let entries = journal?.entries[indexPath.row] else { return UITableViewCell() }
         
-        let entry = EntryController.shared.entries[indexPath.row]
-        
-        cell.textLabel?.text = entry.title
+        cell.textLabel?.text = entries.title
 
         return cell
     }

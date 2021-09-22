@@ -11,6 +11,7 @@ class EntryDetailViewController: UIViewController {
     
     // MARK: - Properties
     var entry: Entry?
+    var journal: Journal?
     
     // MARK: - Outlets
     @IBOutlet weak var titleTextField: UITextField!
@@ -34,8 +35,9 @@ class EntryDetailViewController: UIViewController {
             guard let titleTextFieldText = titleTextField.text,
                   !titleTextFieldText.isEmpty,
                   let bodyTextViewText = bodyTextView.text,
-                  !bodyTextViewText.isEmpty else { return }
-            EntryController.shared.createEntryWith(title: titleTextFieldText, body: bodyTextViewText)
+                  !bodyTextViewText.isEmpty,
+                  let journal = journal else { return }
+            EntryController.createEntryWith(title: titleTextFieldText, body: bodyTextViewText, journal: journal)
         }
         self.navigationController?.popViewController(animated: true)
     }

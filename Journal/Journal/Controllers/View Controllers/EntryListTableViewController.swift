@@ -24,12 +24,14 @@ class EntryListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return EntryController.shared.entries.count
+        return journal?.entries.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entryCell", for: indexPath)
 
+        guard let journal = journal?.entries[indexPath.row] else { return UITableViewCell() }
+        
         let entry = EntryController.shared.entries[indexPath.row]
         
         cell.textLabel?.text = entry.title
@@ -40,8 +42,9 @@ class EntryListTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let entryToDelete = EntryController.shared.entries[indexPath.row]
-            EntryController.shared.delete(entry: entryToDelete)
+            guard let journal = journal else { return }
+            let entryToDelete = journal.entries[indexPath.row]
+            EntryController.delete(entry: entryToDelete, journal: journal)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -53,7 +56,8 @@ class EntryListTableViewController: UITableViewController {
         guard let destinationVC = segue.destination as? EntryDetailViewController,
               let indexPath = tableView.indexPathForSelectedRow else { return }
         if segue.identifier == "toDetailVC" {
-            let entryToSend = EntryController.shared.entries[indexPath.row]
+            guard let journal = journal else { return }
+            let entryToSend = journal.entries[indexPath.row]
             destinationVC.entry = entryToSend
         }
     }
